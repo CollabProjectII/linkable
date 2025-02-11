@@ -1,7 +1,7 @@
 let sendCount = 0;
 const sendMessage = (message) => {
     if(sendCount <= 3){
-        emailjs.send("service_pw9pavy", "template_3w7rw5p", { message }, "RIgbUvEW-lbI8mkxi")
+        emailjs.send( SERVICE_ID, TEMPLATE_ID, { message }, API)
         .then(function (response) { // Mail Sent Successfuly
             console.log(response);
             sendCount++;
